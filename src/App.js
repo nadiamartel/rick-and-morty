@@ -8,21 +8,25 @@ import { Routes, Route } from 'react-router-dom';
 import About from './components/About/About.jsx';
 import Detail from './components/Detail/Detail.jsx';
 
+const URL_BASE = "https://be-a-rym.up.railway.app/api/character";
+const API_KEY = "878234e34ac0.a876ba3a751c3d2ce27d";
+
    function App() {
    const [characters, setCharacters] = useState([]);
 
    const onSearch = (id) => {
-      axios(`https://rickandmortyapi.com/api/character/${id}`).then(({ data }) => {
+      axios(`${URL_BASE}/${id}?key=${API_KEY}`)
+      .then(({ data }) => {
          if (data.name) {
             setCharacters((oldChars) => [...oldChars, data]);
          } else {
-            alert('¡No hay personajes con este ID!');
+            alert("¡No hay personajes con este ID!");
          }
       });
    }
 
    const onClose = (id) => {
-      const charactersFiltered = characters.filter(character => character.id !== Number(id))
+      const charactersFiltered = characters.filter(character => character.id !== id)
       setCharacters(charactersFiltered)
    }
 
