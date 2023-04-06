@@ -1,0 +1,24 @@
+.button{
+    width: 150px;
+    height: 30px;
+    background-color: #F5B7B1;
+    color: white;
+    font-size: larger;
+    border-radius: 4px;
+}
+
+.button:hover{
+    background-color: #CD5C5C;
+}
+
+.input{
+    width: 150px;
+    height: 30px;
+    border-end-end-radius: 40%;
+    writing-mode: vertical-rl;
+}
+
+.input:focus{
+    outline: none;
+}
+

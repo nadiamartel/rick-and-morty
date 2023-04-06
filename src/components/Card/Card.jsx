@@ -1,9 +1,10 @@
 //import styles from "./Card.module.css"
 import { Link } from "react-router-dom";
-   
+import style from "./Card.module.css";
+
 export default function Card({ id, name, status, species, gender, origin, image, onClose }) {
    return (
-      <div>
+      <div className={style.divContenedor}>
             <button onClick={() => onClose(id)}>X</button>
          <Link to={`/detail/${id}`}>
             <h2>{name}</h2>

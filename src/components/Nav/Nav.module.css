@@ -1,0 +1,32 @@
+.divContenedor{
+    display: flex;
+    justify-content: space-around;
+    background-color: #061747 ;
+    padding: 1%;
+}
+
+.buttonAbout, .buttonHome{ 
+    /* background-color: #F1948A;
+    width: 150px;
+    height: 30px;
+    font-size: larger;
+    border-radius: 5px; */
+    /* ------------------------------------------------- */
+    transition-duration: 0.4s;
+    color: #EAECEE;
+    width: 150px;
+    height: 30px;
+    border-radius: 4px;
+    font-size: larger;
+   
+} 
+
+.buttonAbout:hover, .buttonHome:hover {
+  background-color: #F5B7B1 ; /* verde */
+  color: #EAECEE;
+}
+
+
+
+
+

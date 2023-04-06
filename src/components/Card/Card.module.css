@@ -1,0 +1,8 @@
+.divContenedor{
+    /* background: rgb(231,95,155);
+    background: linear-gradient(0deg, rgba(231,95,155,1) 0%, rgba(21,67,96,1) 100%); */
+    background-image: url("../img/bg1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
