@@ -1,10 +1,11 @@
 .button{
     width: 150px;
     height: 30px;
-    background-color: #F5B7B1;
+    background-color: #061747;
     color: white;
     font-size: larger;
     border-radius: 4px;
+    border: 0;
 }
 
 .button:hover{
