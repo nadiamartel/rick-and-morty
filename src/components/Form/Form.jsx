@@ -1,5 +1,6 @@
 import {useState} from "react";
 import validation from "./validation";
+import style from "./Form.module.css";
 
 const Form = ({login}) =>{ //le paso por parametro la fn atributo
 
@@ -29,17 +30,26 @@ const Form = ({login}) =>{ //le paso por parametro la fn atributo
     }
 
     return(
+        <div>
+            {/* <img src="https://1.bp.blogspot.com/-PfWBPhWG41c/Xzw85k4Y9kI/AAAAAAAAZ7Y/w0HVL4fts3QoQ0mil3FZOmZNo9UXTiICACLcBGAsYHQ/d/Rick-and-morty-wallpaper-hd-by-heroscreen.png" alt="imagen" /> */}
+
         <form onSubmit={handleSubmit}>
-            <label htmlFor="email">Email</label>
-            <input name="email" type="text" placeholder="Ingresa tu e-mail" value={userData.email} onChange={handleChange}/>
-            {errors.email && <p style={{color:"red"}}>{errors.email}</p>}
+            <div className={style.formContenedor}>
+                <h1>LOGIN</h1>
 
-            <label htmlFor="password">Password</label>
-            <input name="password" type="text" placeholder="Ingresa tu password" value={userData.password} onChange={handleChange} />
-            {errors.password && <p style={{color:"red"}}>{errors.password}</p>}
+                <label htmlFor="email">Email</label>
+                <input name="email" type="text" placeholder="Ingresa tu e-mail" value={userData.email} onChange={handleChange}/>
+                {errors.email && <p style={{color:"red"}}>{errors.email}</p>}
 
-            <button>Submit</button>
+                <label htmlFor="password">Password</label>
+                <input name="password" type="password" placeholder="Ingresa tu password" value={userData.password} onChange={handleChange} />
+                {errors.password && <p style={{color:"red"}}>{errors.password}</p>}
+
+                <button>Submit</button>
+            </div>
         </form>
+
+        </div>
     )
 }
 

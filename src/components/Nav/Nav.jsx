@@ -5,6 +5,9 @@ import { NavLink } from "react-router-dom";
 export default function Nav({onSearch}){
     return(
         <div className={style.divContenedor}>
+
+            <h2 className={style.title}>EL MULTIVERSO</h2>
+
            <SearchBar onSearch={onSearch} />
 
            <button className={style.buttonAbout}>

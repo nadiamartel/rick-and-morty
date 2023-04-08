@@ -1,4 +1,5 @@
 import './App.css';
+import style from "./App.module.css";
 import Cards from './components/Cards/Cards.jsx';
 import Nav from './components/Nav/Nav.jsx';
 // import characters from './data'; 
@@ -29,7 +30,7 @@ const API_KEY = "878234e34ac0.a876ba3a751c3d2ce27d";
 
    useEffect(() => {
       !access && navigate('/');
-   }, [access]);
+   }, [access, navigate]);
 
    const onSearch = (id) => {
       axios(`${URL_BASE}/${id}?key=${API_KEY}`)
@@ -50,8 +51,17 @@ const API_KEY = "878234e34ac0.a876ba3a751c3d2ce27d";
    return (
       <div>             
          {location.pathname === "/" ? <Form login={login}/> : <Nav onSearch = {onSearch}/> }
+
          <Routes>
-            <Route path="/home" element={<Cards characters={characters} onClose={onClose} />}/>
+            <Route 
+               path="/home" 
+               element={
+                  <div className={style.cardContenedor}>
+               <Cards characters={characters} onClose={onClose} />
+                  </div>
+               }
+               />
+            
             <Route path="/about" element={<About/>}/>
             <Route path="/detail/:id" element={<Detail/>}/>
          </Routes>

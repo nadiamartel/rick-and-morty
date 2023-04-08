@@ -1,0 +1,16 @@
+.cardContenedor{
+    background-color: transparent; 
+    display: flex;
+    flex-wrap: wrap;
+    /* display: grid;
+    place-content: center; */
+    align-items: center;
+    gap: 1px;
+
+    margin: 2px auto;
+    max-width: 1200px;
+    padding: 1px;
+    width: 100%;
+}
+
+

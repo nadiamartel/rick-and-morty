@@ -3,6 +3,7 @@
     justify-content: space-around;
     background-color: #061747 ;
     padding: 1%;
+ 
 }
 
 .buttonAbout, .buttonHome{ 
@@ -22,8 +23,13 @@
 } 
 
 .buttonAbout:hover, .buttonHome:hover {
-  background-color: #CD5C5C ; /* verde */
+  background-color: #F71CC6 ; /* verde */
   color: #EAECEE;
+}
+
+.title{
+  color: #EAECEE;
+  margin-top: 0%;
 }
 
 
