@@ -1,6 +1,6 @@
 
-const validation = (userData) => {
-    let errors = {};
+const validation = (userData) => { //recibe por props el state
+    let errors = {}; //esto se hace porque no me pide ni me dice que es un objeto, so lo inicializo
 
     if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(userData.email)){
          errors.email = "El email ingresado no es correcto";

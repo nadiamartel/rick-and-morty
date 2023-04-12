@@ -2,7 +2,12 @@ import style from "./Nav.module.css"
 import SearchBar from "../SearchBar/SearchBar.jsx";
 import { NavLink } from "react-router-dom";
 
-export default function Nav({onSearch}){
+export default function Nav({onSearch, setAccess}){
+
+    const handleLogOut = () =>{
+        setAccess(false);
+    }
+
     return(
         <div className={style.divContenedor}>
 
@@ -17,6 +22,12 @@ export default function Nav({onSearch}){
            <button className={style.buttonHome}>
                 <NavLink to= "/home">Home</NavLink>
            </button>
+
+           <button className={style.buttonFav}>
+                <NavLink to= "/favorites">Favorites</NavLink>
+           </button>
+
+           <button onClick={handleLogOut} className={style.buttonLog}>LOG OUT</button>
         </div>
     )
 }

@@ -9,18 +9,21 @@ import { Routes, Route, useLocation, useNavigate} from 'react-router-dom';
 import About from './components/About/About.jsx';
 import Detail from './components/Detail/Detail.jsx';
 import Form from './components/Form/Form';
+import Favorites from './components/Favorites/Favorites';
 
 const URL_BASE = "https://be-a-rym.up.railway.app/api/character";
 const API_KEY = "878234e34ac0.a876ba3a751c3d2ce27d";
+
+const EMAIL = 'nadiagmartel@gmail.com';
+const PASSWORD = 'henry2023';
+
 
    function App() {
    const [characters, setCharacters] = useState([]);
    const location = useLocation();
    const navigate = useNavigate();
    const [access, setAccess] = useState(false);
-   const EMAIL = 'nadiagmartel@gmail.com';
-   const PASSWORD = 'henry2023';
-
+   
    const login = (userData) => {
    if(userData.password === PASSWORD && userData.email === EMAIL) {
       setAccess(true);
@@ -50,9 +53,10 @@ const API_KEY = "878234e34ac0.a876ba3a751c3d2ce27d";
 
    return (
       <div>             
-         {location.pathname === "/" ? <Form login={login}/> : <Nav onSearch = {onSearch}/> }
+         {location.pathname !== "/" && <Nav onSearch = {onSearch} setAccess={setAccess}/> }
 
          <Routes>
+            <Route path="/" element={<Form login={login}/>} />
             <Route 
                path="/home" 
                element={
@@ -63,7 +67,9 @@ const API_KEY = "878234e34ac0.a876ba3a751c3d2ce27d";
                />
             
             <Route path="/about" element={<About/>}/>
+            <Route path="/favorites" element={<Favorites/>}/>
             <Route path="/detail/:id" element={<Detail/>}/>
+
          </Routes>
 
         

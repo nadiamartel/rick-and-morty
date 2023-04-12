@@ -6,7 +6,7 @@
  
 }
 
-.buttonAbout, .buttonHome{ 
+.buttonAbout, .buttonHome, .buttonLog, .buttonFav{ 
     /* background-color: #F1948A;
     width: 150px;
     height: 30px;
@@ -25,6 +25,12 @@
 .buttonAbout:hover, .buttonHome:hover {
   background-color: #F71CC6 ; /* verde */
   color: #EAECEE;
+}
+
+.buttonLog, .buttonFav{
+  color: #17202A;
+  font-style: oblique;
+  font-family: fantasy;
 }
 
 .title{
