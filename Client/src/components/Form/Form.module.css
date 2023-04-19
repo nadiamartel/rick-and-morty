@@ -1,0 +1,41 @@
+.formContenedor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    gap: 15px;
+    text-align: center;
+    font-size: large;
+
+
+    /* background-image: url("../img/bg.png");
+    background-size: cover; */
+
+}
+
+body {
+    background-image: url("../img/bg.png");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* ESTO ES LO QIE APARECE EN LA PANTALLA PRINCIPAL DEL LOGIN */
+
+.gral {
+    background-color: #FDEDEC;
+    opacity: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    /* ajusta el ancho según tus necesidades */
+    height: 450px;
+    /* ajusta el alto según tus necesidades */
+    border: 5px outset;
+}
+
+.gral:hover{
+    opacity: 80%;
+}
