@@ -11,7 +11,7 @@ export default function Nav({onSearch, setAccess}){
     return(
         <div className={style.divContenedor}>
 
-            <h2 className={style.title}></h2>
+            {/* <h2 className={style.title}></h2> */}
 
            <button className={style.buttonAbout}>
                 <NavLink to= "/about">About</NavLink>

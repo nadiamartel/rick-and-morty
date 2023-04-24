@@ -11,13 +11,14 @@ const reducer = (state = initialState, action) =>{
         case ADD_FAV:
             return{
                 ...state,
-                myFavorites : [...state.allCharacters, action.payload],
-                allCharacters: [...state.allCharacters, action.payload]
+                myFavorites : action.payload,
+                allCharacters: action.payload
             }
         case REMOVE_FAV:
             return{
                 ...state,
-                myFavorites : state.myFavorites.filter((character) => character.id !== action.payload)
+                myFavorites : action.payload,
+                allCharacters: action.payload //para el bug, revisar!!!!
             }
         case FILTER:
             const allCharactersFiltered = state.allCharacters.filter(character => character.gender === action.payload)

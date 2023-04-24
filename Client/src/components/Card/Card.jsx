@@ -29,7 +29,7 @@ function Card({ id, name, status, species, gender, origin, image, onClose, addFa
             setIsFav(true);
          }
       });
-   }, [myFavorites]);
+   }, [myFavorites, id]);
 
    return (
       <div className={style.divContenedor}>
