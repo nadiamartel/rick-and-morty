@@ -1,8 +1,9 @@
 const express = require("express");
-const server = express();
+const server = express(); //config de nuestro server
 const router = require("./routes/index")
 const morgan = require("morgan");
 const PORT = 3002;
+const { conn } = require('./DB_connection'); //config de nuestra base de datos 05052023
 
 server.use(express.json());
 server.use(morgan("dev"));
@@ -23,8 +24,9 @@ server.use((req, res, next) => {
 
 server.use("/rickandmorty", router)
 
-server.listen(PORT, () =>{
+server.listen(PORT, async() =>{
     console.log(('Server raised in port: ' + PORT));
+    await conn.sync({force: true})
 })
 
 
