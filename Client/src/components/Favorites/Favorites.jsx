@@ -3,7 +3,7 @@ import Card from "../Card/Card";
 import { orderCards } from "../../redux/action";
 import { filterCards } from "../../redux/action";
 import { useState} from "react";
-
+import s from "./Favorite.module.css";
 
 
 const Favorites = () => {
@@ -21,7 +21,7 @@ const Favorites = () => {
     }
 
     return(
-        <div>
+        <div className={s.contenedor}>
             <div>
                     <select onChange={handleOrder}>
                         <option value="A">ASCENDENTE</option>
