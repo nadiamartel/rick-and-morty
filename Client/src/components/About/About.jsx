@@ -1,33 +1,35 @@
+import s from "./About.module.css"
+
 const About = () => {
     return (
-        <div>
+        <div className={s.container}>
 
-            <h1>Mi Página de Acerca de Mí</h1>
+            <h1 className={s.title}>Mi Página de Acerca de Mí</h1>
 
-            <main>
-                <section>
-                    <h2>Sobre Mí</h2>
-                    <img src="" alt="foto" />
-                    <p>Hola, soy Nadia. Soy bla. Disfruto bla. Me apasiona bla.</p>
-                    <p>Estoy emocionado/a por compartir más sobre mí y mis intereses contigo.</p>
+            <main className={s.mainContent}>
+                <section className={s.section}>
+                    <h2 className={s.sectionTitle}>Sobre Mí</h2>
+                    <img className={s.image} src="" alt="foto" />
+                    <p className={s.sectionText}>Hola, soy Nadia. Soy bla. Disfruto bla. Me apasiona bla.</p>
+                    <p className={s.sectionText}>Estoy emocionado/a por compartir más sobre mí y mis intereses contigo.</p>
                 </section>
 
-                <section>
+                <section className={s.section}>
                     <h2>Mis Habilidades</h2>
                     <ul>
-                        <li>Habilidad 1</li>
-                        <li>Habilidad 2</li>
-                        <li>Habilidad 3</li>
+                        <li className={s.listItem}>Habilidad 1</li>
+                        <li className={s.listItem}>Habilidad 2</li>
+                        <li className={s.listItem}>Habilidad 3</li>
                     </ul>
                 </section>
 
-                <section>
-                    <h2>Mi Experiencia</h2>
-                    <p>Tengo experiencia en bla. He trabajado en bla.</p>
+                <section className={s.section}>
+                    <h2 className={s.sectionTitle}>Mi Experiencia</h2>
+                    <p className={s.sectionText}>Tengo experiencia en bla. He trabajado en bla.</p>
                 </section>
             </main>
 
-            <footer>
+            <footer className={s.footer}>
                 <p>Contacto: mail o redes</p>
             </footer>
 

@@ -1,42 +1,49 @@
-body {
+/* Estilos generales */
+/* body {
     font-family: Arial, sans-serif;
+    background-color: #1f1f1f; 
+    color: #fff; 
     margin: 0;
     padding: 0;
-  }
-  
-  header {
-    background-color: #f0f0f0;
-    text-align: center;
-    padding: 20px;
-  }
-  
-  main {
-    padding: 20px;
-  }
-  
-  .about-container {
+} */
+
+
+.container {
     display: flex;
-  }
-  
-  .image-container {
-    width: 30%; /* Ajusta el ancho de la imagen según lo desees */
-  }
-  
-  .image-container img {
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.title {
+    text-align: center;
+}
+
+.mainContent {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.section {
+    flex: 1;
+}
+
+.image {
     max-width: 100%;
     height: auto;
     display: block;
-    border-radius: 5px;
-  }
-  
-  .content {
-    width: 70%;
-    padding-left: 20px;
-  }
-  
-  footer {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer {
     text-align: center;
-    padding: 10px;
-    background-color: #ccc;
-  }
-  
+    margin-top: 20px;
+}
+
+.sectionTitle,
+.sectionText,
+.listItem {
+    color: #fff; 
+}
