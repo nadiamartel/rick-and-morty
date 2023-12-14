@@ -7,6 +7,7 @@ const About = () => {
             <main>
                 <section>
                     <h2>Sobre Mí</h2>
+                    <img src="" alt="foto" />
                     <p>Hola, soy Nadia. Soy bla. Disfruto bla. Me apasiona bla.</p>
                     <p>Estoy emocionado/a por compartir más sobre mí y mis intereses contigo.</p>
                 </section>
